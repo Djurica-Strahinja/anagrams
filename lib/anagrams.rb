@@ -6,8 +6,8 @@ class Anagram
     result
   end
 
-  def print_anagrams
-    anagrams = anagrams()
+  def print_anagrams(file_name)
+    anagrams = anagrams(file_name)
     anagrams.each do |line|
       print "#{line.each {|word| word.delete!("\n")}.join(", ")}\n"
     end
