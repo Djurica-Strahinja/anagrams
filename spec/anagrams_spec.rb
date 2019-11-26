@@ -1,9 +1,9 @@
 require "anagrams"
 
-describe Anagram do
+describe Anagrams do
   describe ".anagrams" do
-    sample = Anagram.new
-    all_anagrams = sample.anagrams(["cile","mile","pile","LEMI","drakos","drako's"])
+    sample = Anagrams.new
+    all_anagrams = sample.find_anagrams(["cile","mile","pile","LEMI","drakos","drako's"])
     it 'should get all anagrams' do
       expect(all_anagrams.count).to be 2
     end
@@ -25,10 +25,10 @@ describe Anagram do
   end
 
   describe ".read" do
-    sample = Anagram.new
-    file = sample.read("simple-anagrams.txt")
+    sample = Anagrams.new
+    file = sample.read("lib/simple-anagrams.txt")
     it 'should get all anagrams from file' do
-      expect(sample.anagrams(file).count).to be 2
+      expect(sample.find_anagrams(file).count).to be 2
     end
   end
 end

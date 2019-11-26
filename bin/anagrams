@@ -3,5 +3,5 @@
 require_relative "../lib/anagrams"
 
 arg = ARGV
-sample = Anagram.new
+sample = Anagrams.new
 sample.print_anagrams(arg[0].to_s)
