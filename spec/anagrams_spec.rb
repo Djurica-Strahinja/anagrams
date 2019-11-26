@@ -3,7 +3,7 @@ require "anagrams"
 describe Anagram do
   describe ".anagrams" do
     sample = Anagram.new
-    all_anagrams = sample.anagrams
+    all_anagrams = sample.anagrams("anagrams-wordlist.txt")
     it 'should get all anagrams' do
       expect(all_anagrams.count).to be 50070
     end
