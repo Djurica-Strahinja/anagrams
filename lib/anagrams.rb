@@ -1,10 +1,5 @@
 class Anagram
-  def read(file_name)
-    Dir.chdir(File.dirname(__FILE__))
-    File.open(file_name) do |file|
-      file.readlines()
-    end
-  end
+
 
   def anagrams
     dictionary = read("anagrams-wordlist.txt")
@@ -17,6 +12,14 @@ class Anagram
       if line.length > 1
         print "#{line.each {|word| word.delete!("\n")}.join(", ")}\n"
       end
+    end
+  end
+
+  private
+  def read(file_name)
+    Dir.chdir(File.dirname(__FILE__))
+    File.open(file_name) do |file|
+      file.readlines()
     end
   end
 end
