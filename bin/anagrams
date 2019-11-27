@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/anagrams"
+
+arg = ARGV
+sample = Anagrams.new
+sample.print_anagrams(arg[0].to_s)
